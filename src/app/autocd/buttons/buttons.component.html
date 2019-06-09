@@ -1,0 +1,16 @@
+<div class="columns">
+  <div class="column">
+    <a class="button is-primary is-rounded" (click)="emitChangeEvent(1)">Add 1</a>
+  </div>
+  <div class="column">
+    <a class="button is-link is-rounded" (click)="emitChangeEvent(5)">Add 5</a>
+  </div>
+  <div class="column">
+    <a class="button is-primary is-warning is-rounded" (click)="emitChangeEvent(-1)">Minus 1</a>
+  </div>
+  <div class="column">
+    <a class="button is-primary is-danger is-rounded" (click)="emitChangeEvent(-5)">Minus 5</a>
+  </div>
+</div>
+
+{{ printTrace }}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouteConstant } from 'src/constant/route.constant';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-demo';
+  RouteConstant = RouteConstant;
+
+  showBurgerMenu: boolean = false;
+
+  toggleBurger() {
+    this.showBurgerMenu = !this.showBurgerMenu;
+  }
+
+  closeBurger() {
+    this.showBurgerMenu = false;
+  }
 }

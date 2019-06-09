@@ -1,0 +1,25 @@
+<h1 style="margin-top:60px; margin-bottom: 3rem; font-weight: 700;" class="is-size-5">Manual Change Detection</h1>
+
+<app-display [displayNumber]="currentNumber"></app-display>
+<app-buttons (changed)="updateState($event)"></app-buttons>
+
+<app-trace-toggle (clicked)="updateTraceCards($event)"></app-trace-toggle>
+<div class="margin-top: 1rem; margin-bottom: 1rem;"></div>
+
+<app-trigger-btn (clicked)="mark()"></app-trigger-btn>
+
+<ng-container *ngIf="!loading; else loadingTemplate">
+  <div class="columns is-multiline">
+    <ng-container *ngFor="let data of posts; let i = index;">
+      <div class="column is-half" style="margin-bottom: 1rem;">
+        <app-card [data]="data" (remove)="removePost($event)" [traceEvent]="traceCards"></app-card>
+      </div>
+    </ng-container>
+  </div>
+
+</ng-container>
+{{ printTrace }}
+
+<ng-template #loadingTemplate>
+  <app-loading></app-loading>
+</ng-template>

@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-content">
+    <p class="title">{{ data?.id }}</p>
+    <p class="subtitle">{{ data?.title }}</p>
+  </div>
+  <footer class="card-footer">
+    <div class="card-footer-item">
+      <a class="button is-primary is-danger is-rounded" (click)="emitRemove(data?.id)">Remove</a>
+    </div>
+  </footer>
+</div>
+
+{{ trace }}

@@ -1,0 +1,5 @@
+<div style="margin-top: 15px; margin-bottom: 25px; text-align: center;">
+  <a class="button is-rounded" [ngClass]="{ 'is-danger': !trace, 'is-success': trace }" 
+    (click)="toggle()">Toggle Trace for Cards ( {{ trace ? 'ON' : 'OFF' }} )
+  </a>
+</div>
